@@ -37,7 +37,7 @@ const EmailCard = ({ response, selectedTicket }) => {
 
   const copyToClipboard = (text) => {
     const textField = document.createElement("textarea");
-    textField.innerText = text;
+    textField.value = text;
     document.body.appendChild(textField);
     textField.select();
     document.execCommand("copy");

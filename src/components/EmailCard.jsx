@@ -51,50 +51,52 @@ const EmailCard = ({ response, selectedTicket }) => {
 
   return (
     <div className="space-y-4">
-      <div className="card bg-gray-200 p-4 rounded-md shadow-md">
+      <div className="card bg-gray-100 p-4 rounded-md shadow-md">
         {loading ? (
           <Loader />
         ) : res ? (
           <div>
             <div className="mb-4 flex items-start justify-between">
-  <div className="flex  w-1/2 max-w-[calc(50%-1rem)]">
-    <p className="font-bold">Subject:</p>
-    <pre className="text-left whitespace-pre-wrap pl-10">{res.subject}</pre>
-  </div>
-  <button
-    className="flex-shrink-0 ml-4"
-    style={{ width: '20px', height: '20px' }}
-    onClick={() => copyToClipboard(`${res.subject}`)}
-    aria-label="Copy Subject"
-  >
-    <img
-      className="w-full h-full"
-      src="src/assets/images/copy.svg"
-      alt="Copy Subject"
-    />
-  </button>
-</div>
+              <div className="flex  w-1/2 max-w-[calc(50%-1rem)]">
+                <p className="font-bold">Subject:</p>
+                <pre className="text-left whitespace-pre-wrap pl-10">
+                  {res.subject}
+                </pre>
+              </div>
+              <button
+                className="flex-shrink-0 ml-4"
+                style={{ width: "20px", height: "20px" }}
+                onClick={() => copyToClipboard(`${res.subject}`)}
+                aria-label="Copy Subject"
+              >
+                <img
+                  className="w-full h-full"
+                  src="src/assets/images/copy.svg"
+                  alt="Copy Subject"
+                />
+              </button>
+            </div>
 
-<div className="mb-4 flex items-start justify-between">
-  <div className="flex  w-1/2 max-w-[calc(100%-1rem)]">
-    <p className="font-bold">Body:</p>
-    <pre className="text-left whitespace-pre-wrap pl-16">{res.body}</pre>
-  </div>
-  <button
-    className="flex-shrink-0 ml-4"
-    style={{ width: '20px', height: '20px' }}
-    onClick={() => copyToClipboard(`${res.body}`)}
-    aria-label="Copy Body"
-  >
-    <img
-      className="w-full h-full"
-      src="src/assets/images/copy.svg"
-      alt="Copy Body"
-    />
-  </button>
-</div>
-
-
+            <div className="mb-4 flex items-start justify-between">
+              <div className="flex  w-1/2 max-w-[calc(50%-1rem)]">
+                <p className="font-bold">Body:</p>
+                <pre className="text-left whitespace-pre-wrap pl-16">
+                  {res.body}
+                </pre>
+              </div>
+              <button
+                className="flex-shrink-0 ml-4"
+                style={{ width: "20px", height: "20px" }}
+                onClick={() => copyToClipboard(`${res.body}`)}
+                aria-label="Copy Body"
+              >
+                <img
+                  className="w-full h-full"
+                  src="src/assets/images/copy.svg"
+                  alt="Copy Body"
+                />
+              </button>
+            </div>
 
             <div className="flex justify-around">
               <button

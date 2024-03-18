@@ -141,7 +141,7 @@ const TicketDetailsForm = ({ selectedTicket }) => {
             </form>
           ) : (
             <div className="bg-white p-6 rounded-md shadow-md">
-              <h2 className="text-2xl font-bold mb-4">Email</h2>
+              <h2 className="text-2xl font-bold mb-4">Generated Email</h2>
               <EmailCard response={response}  selectedTicket={selectedTicket}/>
             </div>
           )}
